@@ -12,11 +12,40 @@
     <header>
         <h1>EduChain: Blockchain Credential Verification</h1>
         <button id="modeToggle">🌙 Toggle Dark/Light Mode</button>
+        <!-- Simple Dropdown Menu -->
+        <nav>
+            <label for="dropdownMenu">Menu:</label>
+            <select id="dropdownMenu">
+                <option value="home">Home</option>
+                <option value="register">Register</option>
+                <option value="faq">FAQ</option>
+                <option value="tabs">Tabs</option>
+            </select>
+        </nav>
     </header>
 
     <!-- Hero Section -->
     <section>
         <p>Securely register and verify academic credentials using blockchain technology.</p>
+    </section>
+
+    <!-- Tabbed Interface -->
+    <section>
+        <h2>Tabbed Interface</h2>
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="tab1">Tab 1</button>
+            <button class="tab-btn" data-tab="tab2">Tab 2</button>
+            <button class="tab-btn" data-tab="tab3">Tab 3</button>
+        </div>
+        <div class="tab-content" id="tab1" style="display:block;">
+            <p>This is the content of Tab 1.</p>
+        </div>
+        <div class="tab-content" id="tab2" style="display:none;">
+            <p>This is the content of Tab 2.</p>
+        </div>
+        <div class="tab-content" id="tab3" style="display:none;">
+            <p>This is the content of Tab 3.</p>
+        </div>
     </section>
 
     <!-- Registration Form -->
@@ -47,7 +76,7 @@
         <button id="incrementBtn">Verify Credential</button>
     </section>
 
-    <!-- FAQ Section -->
+    <!-- FAQ Section (Collapsible) -->
     <section>
         <h2>FAQ</h2>
         <div class="faq">
@@ -58,6 +87,10 @@
         <div class="faq">
             <button class="faq-question">Can credentials be faked?</button>
             <p class="faq-answer">No. Once registered, blockchain credentials cannot be altered or forged.</p>
+        </div>
+        <div class="faq">
+            <button class="faq-question">How do I register a credential?</button>
+            <p class="faq-answer">Fill out the registration form above and submit the required details.</p>
         </div>
     </section>
 

@@ -30,6 +30,38 @@ faqQuestions.forEach((question) => {
 });
 
 // =======================
+// Tabbed Interface
+// =======================
+const tabButtons = document.querySelectorAll('.tab-btn');
+const tabContents = document.querySelectorAll('.tab-content');
+tabButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+        tabButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        tabContents.forEach(content => {
+            content.style.display = content.id === btn.dataset.tab ? 'block' : 'none';
+        });
+    });
+});
+
+// =======================
+// Dropdown Menu
+// =======================
+const dropdownMenu = document.getElementById('dropdownMenu');
+dropdownMenu.addEventListener('change', function () {
+    const value = this.value;
+    if (value === 'home') {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else if (value === 'register') {
+        document.getElementById('registerForm').scrollIntoView({ behavior: 'smooth' });
+    } else if (value === 'faq') {
+        document.querySelector('section h2').scrollIntoView({ behavior: 'smooth' });
+    } else if (value === 'tabs') {
+        document.querySelector('.tabs').scrollIntoView({ behavior: 'smooth' });
+    }
+});
+
+// =======================
 // Form Validation
 // =======================
 const form = document.getElementById("registerForm");
