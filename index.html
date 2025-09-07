@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduChain – Credential Verification</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>EduChain: Blockchain Credential Verification</h1>
+        <button id="modeToggle">🌙 Toggle Dark/Light Mode</button>
+    </header>
+
+    <!-- Hero Section -->
+    <section>
+        <p>Securely register and verify academic credentials using blockchain technology.</p>
+    </section>
+
+    <!-- Registration Form -->
+    <section>
+        <h2>Register Student Credential</h2>
+        <form id="registerForm">
+            <label for="studentName">Full Name:</label>
+            <input type="text" id="studentName" name="studentName" required>
+            <small class="error" id="nameError"></small>
+
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" required>
+            <small class="error" id="emailError"></small>
+
+            <label for="wallet">Wallet Address:</label>
+            <input type="text" id="wallet" name="wallet" required>
+            <small class="error" id="walletError"></small>
+
+            <button type="submit">Submit Credential</button>
+            <p id="formSuccess" class="success"></p>
+        </form>
+    </section>
+
+    <!-- Counter Section -->
+    <section>
+        <h2>Verified Credentials</h2>
+        <p id="counter">0</p>
+        <button id="incrementBtn">Verify Credential</button>
+    </section>
+
+    <!-- FAQ Section -->
+    <section>
+        <h2>FAQ</h2>
+        <div class="faq">
+            <button class="faq-question">Why use blockchain for credentials?</button>
+            <p class="faq-answer">Blockchain ensures transparency, tamper-proof records, and global accessibility for
+                academic verification.</p>
+        </div>
+        <div class="faq">
+            <button class="faq-question">Can credentials be faked?</button>
+            <p class="faq-answer">No. Once registered, blockchain credentials cannot be altered or forged.</p>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
